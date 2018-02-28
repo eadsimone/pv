@@ -1,0 +1,21 @@
+// Base
+@import "bower_components/bootstrap/scss/bootstrap.scss";
+@import "bower_components/bootstrap/scss/bootstrap-grid.scss";
+
+//@import "base/reset";
+@import "base/typography";
+//
+// Helpers
+@import "helpers/_variables";
+//@import "helpers/_mixins";
+@import "helpers/_common";
+//
+//// Layout
+@import "layout/navbar";
+@import "layout/footer";
+
+// Specific styles for each page
+@import "pages/all";
+
+//// Media queries
+//@import "base/responsive";

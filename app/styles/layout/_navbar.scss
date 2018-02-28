@@ -1,0 +1,386 @@
+.header_wpc {
+  min-height: 7rem;
+  padding:0.7% 13% 0 13%;
+
+  .navbar-expand-lg {
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+  }
+  .navbar-expand-lg .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto;
+  }
+
+  ul.navbar-nav {
+    a{
+      border-bottom: 0.25rem solid transparent;
+    }
+    .grid-icon {
+      img {
+        width: 1.313rem;
+        height: 1.313rem;
+      }
+    }
+  }
+
+  .navbar {
+    overflow: hidden;
+    span, a {
+      font-family: 'Anton', sans-serif;
+      font-size: 1.313rem;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1;
+      letter-spacing: 1px;
+      text-align: left;
+      color: #fff;
+      padding-bottom: 1rem;
+      text-transform: uppercase;
+    }
+    a:hover {
+      border-bottom: 0.25rem solid $lipstick;
+      background-color: transparent;
+    }
+    a.active {
+      border-bottom: 0.25rem solid $lipstick;
+      background-color: transparent;
+    }
+    a:focus {
+      border-bottom: 0.25rem solid $lipstick;
+      background-color: transparent;
+    }
+    a#logo{
+      border-bottom: 0.25rem solid transparent;
+      img{
+        width: 16.5rem;
+        height: 3.438rem;
+      }
+    }
+  }
+  /*****Overlay*********/
+  .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color:$black-grey;
+    overflow-x: hidden;
+    transition: 0.5s;
+
+
+    .language-bar {
+      font-family: 'Roboto', sans-serif;
+      font-size: 1.125rem;
+      font-weight: 500;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: left;
+      color: $grey-two;
+
+      min-height: 4.375rem;
+      padding-left:  3.875rem;
+
+      li {
+        min-height: 100%;
+        display: flex;
+        align-items: center;
+        position: initial;
+        a {
+          font-family: 'Roboto', sans-serif;
+          color: $grey;
+          background-color: transparent;
+          &:hover, &:focus {
+            color: $lipstick;
+            background-color: transparent;
+          }
+        }
+        &::after {
+          content: "|";
+          float: right;
+          color: $grey-two;
+        }
+        &:nth-last-child(2){
+          &:after {
+            display: none;
+          }
+        }
+        &:nth-last-child(1){
+          background: lightslategrey;
+          &:after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .overlay-content {
+    position: relative;
+    width: 100%;
+    text-align: left;
+    margin-top: 30px;
+    background-color: transparent;
+    padding-left: 3.875rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.5px;
+    text-align: left;
+    li{
+      margin-top: 1.2rem;
+    }
+    a{
+      color:$grey-two;
+      font-size: 1.125rem;
+      opacity: 0.5;
+    }
+
+    .title {
+      a {
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 1.25rem;
+        text-align: left;
+        pointer-events: none;
+        font-family: 'Anton', sans-serif;
+        color: $white;
+        opacity: 1;
+        border-bottom:1px solid rgba(129, 129, 129, .5);
+        &.apply{
+          pointer-events: initial;
+        }
+      }
+    }
+  }
+
+  .overlay a {
+    text-decoration: none;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .overlay a:hover, .overlay a:focus {
+    color: $lipstick;
+    opacity: 1;
+  }
+
+  .overlay .closebtn {
+    position: absolute;
+    right: 45px;
+    font-size: 60px;
+  }
+
+  .nav.language-bar {
+    display: flex;
+  }
+  .mobile,
+  .mobile-menu {
+    display: none!important;
+  }
+
+  //TODO apply style to overlay
+  @media screen and (max-height: 450px) {
+    .overlay a {
+      font-size: 20px
+    }
+    font-family: 'Anton', sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
+//Media Queries for diferents devices
+  @media screen and (max-width: $large) {
+    padding:1.8% 0 0 0;
+  }
+  @media screen and (max-width: $medium) {
+    padding:1.8% 6% 0 6%;
+    img.apply {
+      height: 16px;
+      width: 22px;
+    }
+  }
+  @media screen and (max-width: $small) {
+    padding:0;
+    background-color: $black-grey;
+    .navbar {
+      a#logo{
+        border-bottom: 0.25rem solid transparent;
+        padding: 1rem 0 1rem 3rem;
+        img{
+          width: 18.03rem;
+          height: 3.07rem;
+        }
+      }
+      padding: 0;
+    }
+    .navbar-collapse.justify-content-end {
+      background-color: $grey;
+      min-height: 4.667rem;
+      .navbar-nav {
+        flex-direction: row;
+        justify-content: space-between !important;
+        min-height: 4.667rem;
+        .nav-item {
+          padding-top: 1rem;
+          a{
+            color: $black-pure;
+          }
+
+          .grid-icon {
+            img {
+              width:  2.517rem;
+              height:  2.517rem;
+            }
+          }
+        }
+      }
+    }
+    .divider{
+      display: none;
+    }
+    .wwepc-grid {
+      position: absolute;
+      right: 15px;
+      top: 0px;
+    }
+
+    .nav.language-bar {
+      display: none;
+    }
+    .mobile{
+      display: block !important;
+    }
+    .mobile-menu {
+      display: block !important;
+      min-height: 70px;
+      background-color: $black-pure !important;
+
+      .closebtn.nav-link{
+        position: relative;
+        float: right;
+        padding-top: 2.889rem;
+        max-height: 2.222rem;
+        img {
+          position: absolute;
+        }
+      }
+
+      #dropdownMenuLang {
+        color: $white;
+        font-size:  2rem;
+        font-family: 'Roboto', sans-serif;
+        background: transparent;
+        border: none;
+        padding-top: 2.889rem;
+        padding-left: 2.889rem;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        outline: none;
+        &:after {
+          display: none;
+        }
+        img {
+          margin-left: 1.111rem;
+        }
+      }
+    }
+    .overlay-content{
+      padding-left:0px;
+      .col-12.col-sm-12 {
+        &.title {
+          padding-left: 0px;
+          min-height: 6rem;
+          a{
+            &.title {
+              min-height: 6rem;
+              display: flex;
+              align-items: center;
+              padding-left: 2.778rem;
+
+
+              opacity: 0.93;
+              font-family: 'Anton', sans-serif;
+              font-size: 2.222rem;
+              font-weight: normal;
+              font-style: normal;
+              font-stretch: normal;
+              line-height: normal;
+              letter-spacing: 0.5px;
+              text-align: left;
+              color: $white;
+            }
+          }
+          img {
+            position: relative;
+            float: right;
+            top: -30px;
+            right: 40px;
+            &.apply {
+              top: 0px;
+              right: 0px;
+            }
+          }
+
+        }
+      }
+      .nav.flex-column.collapse {
+        padding-left: 3.111rem;
+        a{
+          opacity: 0.5;
+          font-family: 'Roboto', sans-serif;
+          font-size: 1.333rem;
+          font-weight: normal;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: normal;
+          letter-spacing: 0.5px;
+          text-align: left;
+          color: $white;
+        }
+      }
+    }
+    .dropdown-menu.show {
+      background-color: $black-pure;
+      li {
+        a{
+          color: $white;
+          font-size:  2rem;
+          font-family: 'Roboto', sans-serif;
+          background: transparent;
+          border: none;
+          padding-top: 2.889rem;
+          padding-left: 2.889rem;
+          font-weight: 500;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: normal;
+          letter-spacing: normal;
+          outline: none;
+          &:hover {
+            color: $lipstick;
+            background-color: transparent;
+          }
+        }
+      }
+    }
+  }
+}

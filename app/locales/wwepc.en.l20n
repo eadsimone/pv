@@ -1,0 +1,65 @@
+WINDOW_TITLE  = wwe performance center.
+
+# Navbar
+ABOUTWWEPC = About WWE PC
+JOURNEY = The journey
+APPLY = apply
+TRYOUT = tryout
+
+# Overlay
+OVERLAY-LANG-EN = English
+OVERLAY-LANG-ES = Spanish
+OVERLAY-LANG-HI = Hindi
+OVERLAY-LANG-ZH = Mandarin
+OVERLAY-LANG-AR = Arabic
+
+# Overlay Content
+OVERLAY-CONT-HOME = Home
+OVERLAY-CONT-WELCOME = Welcome
+OVERLAY-CONT-WWEPC = WWE Performance Center
+OVERLAY-CONT-STRENGTHCONDITION = Strength & Condition
+OVERLAY-CONT-LOOKCANDITATES = What We Look for in Candidates
+OVERLAY-CONT-TRYOUPROC = Tryout Process
+OVERLAY-CONT-FACILITIES = Facilities
+OVERLAY-CONT-IN-RING-TRAI-PRO = In-Ring Training Process
+OVERLAY-CONT-PROF-DEVELOPMENT = Professional Development
+OVERLAY-CONT-SPORTS-MEDICINE = Sports Medicine
+OVERLAY-CONT-WWEPC-ROSTER = WWEPC Roster
+OVERLAY-CONT-OUTREACH = Comunity Outreach
+OVERLAY-CONT-SUPERSTAR-JOURNEY = Superstar Journey
+OVERLAY-CONT-SUCCESS-STORIES =  Success Stories
+OVERLAY-CONT-ALUMNI-TESTIMONIALS = Alumni Testimonials
+OVERLAY-CONT-ABOUT-TRYOUTS = About tryouts
+OVERLAY-CONT-PAST-TRYOUTS = Past tryouts
+OVERLAY-CONT-COACHES = Coaches
+OVERLAY-CONT-COMUNITY-OUTREACH = Community Outreach
+
+# Coaches
+COACHES-TITLE = WWE PC COACHES
+COACHES-SUBTITLE = The WWE Performance Center is home to the most elite coaching staff in the sports-entertainment industry, bringing over 300 years of collective experience to athletes training at the facility.
+
+#Roster
+ROSTER-TITLE = WWE PC ROSTER
+ROSTER-SUBTITLE = Talent from around the globe with a variety of unique athletic backgrounds are recruited to train at the WWE Performance Center in hope of becoming WWE’s next great Superstar.
+ROSTER-FEATUREDTALENT = featuredTalent
+ROSTER-ALL  = All
+
+# Aboutus Section one
+ABOUTUS-SECTONE-INRINGTRAINING = In-Ring Training
+ABOUTUS-SECTONE-CHARDEV = Character Development
+ABOUTUS-SECTONE-STRCOND = Strength & Conditioning
+
+# Footer
+CORPORATE = Corporate
+COMMUNITY = Community
+CONTACT-US = Contact US
+PRIVACY-POLICY = Privacy Policy
+COPYRIGHT = &copy; 2018 World Wrestling Entertainment, Inc.
+
+# Error page
+ERROR_PAGE = Sorry, something went wrong :(
+
+#GENERIC
+
+READMORE = Read More
+COLLAPSE = Collapse

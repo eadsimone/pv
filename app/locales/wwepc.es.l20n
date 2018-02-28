@@ -1,0 +1,49 @@
+WINDOW_TITLE  = wwe performance center.
+
+# Navbar
+ABOUTWWEPC = Acerca de WWE PC
+JOURNEY = El viaje
+APPLY = Aplicar
+TRYOUT = probar
+
+# Overlay
+OVERLAY-LANG-EN = Ingles
+OVERLAY-LANG-ES = Español
+OVERLAY-LANG-HI = Hindi
+OVERLAY-LANG-ZH = Mandarin
+OVERLAY-LANG-AR = Arabico
+
+# Overlay Content
+OVERLAY-CONT-HOME = Inicio
+OVERLAY-CONT-WELCOME = Bievenidos
+OVERLAY-CONT-WWEPC = WWE Performance Center
+OVERLAY-CONT-STRENGTHCONDITION = Fuerza y condición
+OVERLAY-CONT-LOOKCANDITATES = Lo que buscamos en los candidatos
+OVERLAY-CONT-TRYOUPROC = Probar nuestro proceso
+OVERLAY-CONT-FACILITIES = Facilities
+OVERLAY-CONT-IN-RING-TRAI-PRO = In-Ring Training Process
+OVERLAY-CONT-PROF-DEVELOPMENT = Professional Development
+OVERLAY-CONT-SPORTS-MEDICINE = Sports Medicine
+OVERLAY-CONT-WWEPC-ROSTER = WWEPC Roster
+OVERLAY-CONT-OUTREACH = Comunity Outreach
+OVERLAY-CONT-SUPERSTAR-JOURNEY = Superstar Journey
+OVERLAY-CONT-SUCCESS-STORIES =  Success Stories
+OVERLAY-CONT-ALUMNI-TESTIMONIALS = Alumni Testimonials
+OVERLAY-CONT-ABOUT-TRYOUTS = About tryouts
+OVERLAY-CONT-PAST-TRYOUTS = Past tryouts
+OVERLAY-CONT-COACHES = Entrenadores
+OVERLAY-CONT-COMUNITY-OUTREACH = Alcance comunitario
+
+# Coaches
+COACHES-TITLE = WWE PC COACHES
+COACHES-SUBTITLE = The WWE Performance Center is home to the most elite coaching staff in the sports-entertainment industry, bringing over 300 years of collective experience to athletes training at the facility.
+
+# Footer
+CORPORATE = Corporativo
+COMMUNITY =  Comunidad
+CONTACT-US = Contáctenos
+PRIVACY-POLICY = Política de privacidad
+COPYRIGHT = &copy; 2018 World Wrestling Entertainment, Inc.
+
+# Error page
+ERROR_PAGE = Sorry, something went wrong :(

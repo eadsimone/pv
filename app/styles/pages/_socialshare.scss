@@ -1,0 +1,107 @@
+#social-share {
+
+  #share-buttons img {
+    width: 35px;
+    padding: 5px;
+    border: 0;
+    box-shadow: 0;
+    display: inline;
+  }
+
+  #collapseExample {
+    display: none;
+  }
+  #description {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    color: $grey-two;
+    padding: 1% 30%;
+  }
+
+  .btn-primary-wwepc {
+    color: white;
+    font-size: 1.25rem;
+    border-color: black;
+    border-radius: 1.5rem;
+    margin: 0 3rem;
+    vertical-align: middle;
+    padding-right: 2.4rem;
+    padding-left: 2.4rem;
+  }
+
+  a {
+    &.readmore {
+      color: black;
+      font-size: 1.125rem;
+      border-color: white;
+      border-radius: 2.667rem;
+      background-color: white;
+      margin:1rem 10rem;
+      vertical-align: middle;
+      padding-right: 2.4rem;
+      padding-left: 2.4rem;
+      font-family: 'Anton', sans-serif;
+      display: block;
+      height: 2.5rem;
+
+      &.discount {
+        color: #f38c00;
+        background-color: #0094be;
+        border-color: #0094be ;
+        margin:1rem 5rem;
+        font-size: 1.35rem;
+        position: relative;
+        bottom: 25px;
+      }
+    }
+  }
+
+    .header {
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      letter-spacing: normal;
+      text-align: center;
+      margin: 1.6% auto;
+
+      h1 {
+        font-family: 'Anton', sans-serif;
+        font-size: 48px;
+        line-height: 1.08;
+        color: $black-pure;
+        margin-bottom: 0;
+      }
+      h3 {
+
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.75rem;
+        line-height: 1.5;
+        color: $black-grey;
+        padding: 1% 30%;
+      }
+    }
+
+
+    //Media Queries for diferents devices
+    @media screen and (max-width: $large) {
+      #coachesslider {
+
+      }
+      .bx-wrapper {
+        .bx-viewport {
+          li {
+            //transform: translate(-30%);
+          }
+        }
+      }
+
+    }
+    @media screen and (max-width: $medium) {
+
+    }
+    @media screen and (max-width: $small) {
+
+    }
+
+}

@@ -1,0 +1,132 @@
+.footer_wwepc {
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.875rem;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: $white;
+  margin-bottom: 3.75rem;
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+
+    &.social-nav {
+      flex-direction: row;
+    }
+    a{
+      color: $white;
+
+      img {
+        width: 1.125rem;
+        height: 1.125rem;
+      }
+    }
+    a:hover {
+      color: $lipstick;
+    }
+    a.active {
+      color: $lipstick;
+    }
+  }
+  .copyright-wwepc {
+    font-size: 0.75rem;
+  }
+  .apply-now {
+    height: 3.75rem;
+    background-color: $white;
+    position: fixed;
+    left:0;
+    bottom: 0;
+    width: 100%;
+    font-family: 'Anton', sans-serif;
+    z-index: 99999;
+
+    a.btn-primary-wwepc {
+      height:2.625rem;
+    }
+    .btn-primary-wwepc {
+      color: $white;
+      font-size: 1.25rem;
+      border-color: $lipstick;
+      border-radius: 1.5rem;
+      background-color: $lipstick;
+
+      margin: 0 3rem;
+      vertical-align: middle;
+      padding-right: 2.4rem;
+      padding-left: 2.4rem;
+    }
+
+    ul {
+      display: flex;
+      list-style: none;
+      width: 100%;
+      align-items: center;
+      font-size:  2rem;
+      color: $black-grey;
+      height: 100%;
+    }
+
+    .col-12.justify-content-center {
+      display: flex;
+    }
+  }
+  //TODO apply style to overlay
+  @media screen and (max-height: 450px) {
+  }
+
+  @media screen and (max-width: $large) {
+    .apply-now {
+      ul {
+        font-size:1.5rem ;
+        li:first-child{
+          display: flex;
+          flex-direction: row;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: $medium) {
+  }
+  @media (max-width: $small) {
+    font-size: 1.313rem;
+    .mt-40{
+      margin-top:4.444rem;
+    }
+    .copyright-wwepc {
+      font-size: 1.1rem;
+    }
+
+    .nav {
+      a{
+        img {
+          width: 1.667rem;
+          height: 1.667rem;
+        }
+      }
+    }
+    .apply-now {
+      min-height: 6.1rem;
+      ul {
+        li:first-child{
+          display: flex;
+          flex-direction: column;
+        }
+        font-size: 1.556rem;
+        .btn-primary-wwepc{
+          font-size: 1.556rem;
+          min-height: 3.556rem;
+          border-radius:2.556rem;
+          margin: 0 3rem 0 5rem;
+        }
+      }
+    }
+  }
+}

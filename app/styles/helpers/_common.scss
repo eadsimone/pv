@@ -1,0 +1,10 @@
+a {
+
+
+}
+//overwrite clearfix
+.navbar-collapse:before, .navbar-collapse:after,
+.navbar:before, .navbar:after {
+  display: none;
+  content: none;
+}
