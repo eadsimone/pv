@@ -3,6 +3,7 @@ class Home {
 
   // Method
   constructor() {
+    this.share = ['../images/fotoshare/balcarce.jpeg','','../images/fotoshare/Barrosa.jpeg','','','','../images/fotoshare/fangio.jpeg'];
     this.currentItem=0;
     this.itemTourist = '[' +
       '  {' +
@@ -111,7 +112,7 @@ class Home {
         '       <div id="collapseExample">' +
         '         <div class="">'+ obj.info +'</div>' +
         '       </div>' +
-        '       <a class="btn btn-primary-wwepc readmore" role="button">Read More</a> ' +
+        '       <a class="btn btn-primary-wwepc readmore readmoreinfo" role="button">Read More</a> ' +
         '     </div>' +
         '   </div>' +
         '   <div id="desafio" class="p-3">' +
@@ -142,7 +143,11 @@ class Home {
 
   renderSocialSharing (){
 
+    var selfthis = this;
+
     $(document).on('click','#info-details .discount',function(e){
+
+      var image = selfthis.share[selfthis.currentItem];
 
       $( '#main-tourist' ).html('');//reset content
 
@@ -150,7 +155,7 @@ class Home {
         '<section id="social-share" class="col-12">' +
         // '   <h1>'+ obj.title +'</h1>'+
         '   <div id="image_description" class="p-3">' +
-        '     <img src="../../images/balcarce_bg.jpg" class="img-fluid">' +
+        '     <img src="'+ image+'" class="img-fluid">' +
         '   </div>' +
         '   <div id="button-share" class="p-3">' +
         '<div id="share-buttons"> ' +

@@ -15,81 +15,6 @@ const detectmob = (max = 800 ) =>{
     return false;
   }
 };
-const collapseFunc = (e) => {
-  if (detectmob()){
-
-    var colapse = 'collapse'+e;
-    var colapseimg = 'mobile-arrow'+e;
-
-    var x = document.getElementById(colapse);
-    var imgcolapse = document.getElementById(colapseimg);
-
-    if (x.style.display === 'none') {
-      x.style.display = 'block';
-      //arrow down
-      imgcolapse.src = '../images/icons/arrow.png';
-    } else {
-      x.style.display = 'none';
-      imgcolapse.src = '../images/icons/arrowdown.png';
-    }
-  }
-};
-
-const resetcontainers = () => {
-  var numberofcontainer = 4;
-  var currentActive = 0;
-  for (let i=1; i <= numberofcontainer; i++ ) {
-    var contId = '#container-' + i;
-    if ($(contId).hasClass('active')) {
-      currentActive = i;
-      $(contId).removeClass('active');
-    }
-  }
-};
-
-const getNumberActive = (activeElement)=> {
-  let arrayOfStrings = activeElement.split('-'),
-    numberActive = parseInt(arrayOfStrings[1]);
-  return numberActive;
-};
-
-const setReadmoreMobile= ()=> {
-  if (detectmob(380)) {
-    $('.readmore').css('display', 'block');
-  } else {
-    $('.readmore').css('display', 'none');
-  }
-  $('#aboutus .content p').removeClass('hidden');
-};
-
-const changeSrcImage = (activeElement) => {
-
-  var numberActive = getNumberActive(activeElement);
-
-  let oldImage = 'previousimage cimg-'+(numberActive-1).toString();
-  let newImage = 'currentimage cimg-'+numberActive.toString();
-
-
-  $('#aboutusContImg-1').removeClass().addClass( oldImage );
-  $('#aboutusContImg-2').removeClass().addClass( newImage );
-};
-
-const executeSliderAboutus = (activeElement = null)=> {
-
-  if(activeElement === null){
-    cont = (cont == 5) ? 1 : cont;
-    activeElement = '#container-'+cont;
-    cont++;
-  } else {
-    clearInterval(automaticInterval);
-  }
-
-  setReadmoreMobile();
-  resetcontainers();
-  $(activeElement).addClass('active');
-  changeSrcImage(activeElement);
-
-};
 
 // $(document).on('click','#main-tourist-row div',function(e){
 //   alert($(this).data('itemid'));
@@ -130,59 +55,8 @@ $(document).on('click','.readmoreinfo', function(e){
   e.preventDefault(); // Prevent a page reload when a link is pressed
 });
 
-const resetCollapse = ()=> {
-  var cch = '10.94rem';
-  var bimg = '50rem';
-
-  if(detectmob(400)){
-    //for small devices
-  } else if (detectmob()){
-    var cch = '10.94rem';
-    var bimg = '70rem';
-  }
-
-  $('.readmore-coaches' ).show();
-  $('.collapse-coaches' ).hide();
-  $('#coaches .content p').removeClass('hidden');
-  $('#coaches .content').css({ height: cch });//todo that is fixed
-  $('.background-image').css({ height: bimg});
-  $('.bgdfilter').css({ height: bimg});
-  $('.container-coach').css({ height: bimg});
-};
-
-$(document).on('click','.readmore-coaches ,.collapse-coaches', function(e){
-  e.preventDefault(); // Prevent a page reload when a link is pressed
-  $('.readmore-coaches' ).toggle();
-  $('.collapse-coaches' ).toggle();
-  if ($(this).hasClass('readmore-coaches')){
-    $('#coaches .content p').addClass('hidden');
-    var nameperson = $(this).data( 'name' );
-    var pbellowtoperson = $( '.'+nameperson+' p.begin-text');
-    var heightCollapse = parseInt(pbellowtoperson.data( 'tall' ));
-
-    if(detectmob(400)){
-      heightCollapse = heightCollapse - 200;
-    } else if (detectmob()){
-      heightCollapse = heightCollapse - 180;
-    } else {
-      heightCollapse = heightCollapse + 50;
-    }
-
-    var especifictall = $('#coaches .content.'+ nameperson).height(heightCollapse);
-
-    $('.container-coach').css({ height: 'auto'});    //
-    //
-     $('.background-image').css({ height: $('.container-coach').height()});
-     $('.bgdfilter').css({ height: $('.background-image').height()});
-
-  } else {
-    resetCollapse();
-  }
-});
 
 var cont = 2 ;
-var automaticInterval = setInterval(executeSliderAboutus, 4000);
-
 var m = new Menu();
 var footer = new Footer();
 
@@ -193,34 +67,3 @@ $(window).trigger('hashchange');
 //document.getElementById('footer').innerHTML= footer.render();
 
 //*****************END RENDER THE MAIN PAGE*****************************
-
-//Slider things
-const clearli = () => {
-  console.log('clearli function');
-  $('#coachesslider li').each(function(i,e)
-  {
-    let classOfLi = $(this).attr('class'); // This is your rel value
-    let isClone = (classOfLi.search('bx-clone') !==-1)? true : false ;
-    if (isClone){
-      $(this).removeClass().addClass('smalli bx-clone');
-    }
-  });
-};
-
-const displayContentSlider = (num) => {
-  num = num+1;
-  let el='.content-slider div:nth-child('+num+')';
-  var count = $('.content-slider div').length;
-  $('.content-slider div').removeClass('active-content');
-  $(el).addClass('active-content');
-};
-
-const existEmpty = () => {
-  $('#coachesslider li').each(function(i,e)
-  {
-    let classOfLi = $(this).attr('class'); // This is your rel value
-    if((classOfLi=='')|| (classOfLi=='bx-clone')){
-      $(this).addClass('smalli');
-    }
-  });
-};
