@@ -3,6 +3,7 @@ class Home {
 
   // Method
   constructor() {
+    this.visitados = 0;
     this.share = ['../images/fotoshare/balcarce.jpeg','','../images/fotoshare/Barrosa.jpeg','','','','../images/fotoshare/fangio.jpeg'];
     this.currentItem=0;
     this.itemTourist = '[' +
@@ -75,10 +76,22 @@ class Home {
       ']';
   }
 
+  rendercoupon() {
+
+    $(document).on('click','.overlay-content .nav-link',function(e){
+
+      //alert('cupon de descuento');
+      $('.cuopon').toggle();
+    });
+  }
+
   // Method
   renderTourist() {
+    console.log('render turism');
+    $('main').html('');
     var html= '';
     var data = JSON.parse(this.itemTourist);
+
 
     html+='<section class="main-section wwen-height text-center overly">' +
       '     <div class="container mt-3 py-3" id="main-tourist">' +
@@ -87,10 +100,23 @@ class Home {
               html+='<div class="col-6 col-sm-4 col-md-4 item-tourist-btn" data-itemid="'+ data[i].id +'">' +
                 '<img src="'+ data[i].image +'" alt="" id="'+ data[i].id +'" class="mw-50 img-fluid pv-rounded">' +
                 '<p>'+ data[i].title +'</p></div>';
+
+              if (data[i].visited != 0){
+                this.visitados++;
+              }
             }
+
+    $('.qty').html(this.visitados);
+
+
     html+='</div></div></section>';
-    return html;
+
+    const mainContent = document.getElementById('main');
+    mainContent.innerHTML = html;
+    //return html;
+    this.rendercoupon();
   }
+
   renderItem (){
     var infodata = JSON.parse(this.itemTourist);
     var selfthis= this;
@@ -133,9 +159,10 @@ class Home {
 
     var selfthis= this;
     var selfthisdata = JSON.parse(this.itemTourist);
-    $(document).on('click','#main-tourist-row div',function(e){
+    $(document).on('click','#share-buttons a',function(e){
 
       selfthisdata[selfthis.currentItem].visited = 1;
+      selfthis.itemTourist = JSON.stringify(selfthisdata);
       selfthis.renderTourist();
       e.preventDefault();
     });
@@ -161,12 +188,12 @@ class Home {
         '<div id="share-buttons"> ' +
 
         // '    <!-- Buffer --> ' +
-        // '    <a href="https://bufferapp.com/add?url=https://simplesharebuttons.com&amp;text=Simple Share Buttons" target="_blank"> ' +
+        // '    <a href="https://bufferapp.com/add?url=https://simplesharebuttons.com&amp;text=Simple Share Buttons"  > ' +
         // '        <img src="https://simplesharebuttons.com/images/somacro/buffer.png" alt="Buffer" /> ' +
         // '    </a> ' +
 
         // '    <!-- Digg --> ' +
-        // '    <a href="http://www.digg.com/submit?url=https://simplesharebuttons.com" target="_blank"> ' +
+        // '    <a href="http://www.digg.com/submit?url=https://simplesharebuttons.com"  > ' +
         // '        <img src="https://simplesharebuttons.com/images/somacro/diggit.png" alt="Digg" /> ' +
         // '    </a> ' +
 
@@ -176,22 +203,22 @@ class Home {
         '    </a> ' +
         '  ' +
         '    <!-- Facebook --> ' +
-        '    <a href="#" target="_blank"> ' +
+        '    <a href="#"  > ' +
         '        <img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" /> ' +
         '    </a> ' +
 
         '    <!-- Google+ --> ' +
-        '    <a href="#" target="_blank"> ' +
+        '    <a href="#"  > ' +
         '        <img src="https://simplesharebuttons.com/images/somacro/google.png" alt="Google" /> ' +
         '    </a> ' +
 
         '    <!-- LinkedIn --> ' +
-        '    <a href="#" target="_blank"> ' +
+        '    <a href="#"  > ' +
         '        <img src="https://simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn" /> ' +
         '    </a> ' +
 
         '    <!-- Pinterest --> ' +
-        '    <a href="#" target="_blank"> ' +
+        '    <a href="#"  > ' +
         '        <img src="https://simplesharebuttons.com/images/somacro/pinterest.png" alt="Pinterest" /> ' +
         '    </a> ' +
 
@@ -201,32 +228,32 @@ class Home {
         // '    </a> ' +
 
         '    <!-- Reddit --> ' +
-        '    <a href="http://reddit.com/submit?url=https://simplesharebuttons.com&amp;title=Simple Share Buttons" target="_blank"> ' +
+        '    <a href="http://reddit.com/submit?url=https://simplesharebuttons.com&amp;title=Simple Share Buttons"  > ' +
         '        <img src="https://simplesharebuttons.com/images/somacro/reddit.png" alt="Reddit" /> ' +
         '    </a> ' +
 
         '    <!-- StumbleUpon--> ' +
-        '    <a href="#" target="_blank"> ' +
+        '    <a href="#"  > ' +
         '        <img src="https://simplesharebuttons.com/images/somacro/stumbleupon.png" alt="StumbleUpon" /> ' +
         '    </a> ' +
 
         '    <!-- Tumblr--> ' +
-        '    <a href="#" target="_blank"> ' +
+        '    <a href="#"  > ' +
         '        <img src="https://simplesharebuttons.com/images/somacro/tumblr.png" alt="Tumblr" /> ' +
         '    </a> ' +
         '      ' +
         '    <!-- Twitter --> ' +
-        '    <a href="#" target="_blank"> ' +
+        '    <a href="#"  > ' +
         '        <img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" /> ' +
         '    </a> ' +
 
         '    <!-- VK --> ' +
-        '    <a href="#" target="_blank"> ' +
+        '    <a href="#"  > ' +
         '        <img src="https://simplesharebuttons.com/images/somacro/vk.png" alt="VK" /> ' +
         '    </a> ' +
 
         '    <!-- Yummly --> ' +
-        '    <a href="#" target="_blank"> ' +
+        '    <a href="#"  > ' +
         '        <img src="https://simplesharebuttons.com/images/somacro/yummly.png" alt="Yummly" /> ' +
         '    </a> ' +
         '</div>' +

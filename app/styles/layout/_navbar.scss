@@ -37,6 +37,13 @@
       color: #fff;
       padding-bottom: 1rem;
       text-transform: uppercase;
+
+      &.qty{
+      position: relative;
+        left: -1.3rem;
+        top: .1rem;
+      color: $orange;
+      }
     }
     a:hover {
       border-bottom: 0.25rem solid $lipstick;
@@ -158,6 +165,10 @@
         }
       }
     }
+    .cuopon {
+      display: none;
+      width: 90%;
+    }
   }
 
   .overlay a {
@@ -236,6 +247,17 @@
         flex-direction: row;
         justify-content: space-between !important;
         min-height: 4.667rem;
+
+        span, a {
+          &.qty {
+            position: absolute;
+            left: 9px;
+            top: 20px;
+            color: $orange;
+          }
+        }
+
+
         .nav-item {
           padding-top: 1rem;
           a{
