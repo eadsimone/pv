@@ -15,6 +15,27 @@ const detectmob = (max = 800 ) =>{
     return false;
   }
 };
+const collapseFunc = (e) => {
+  console.log('entro a collapse function');
+
+  if (detectmob()){
+
+    var colapse = 'collapse'+e;
+    var colapseimg = 'mobile-arrow'+e;
+
+    var x = document.getElementById(colapse);
+    var imgcolapse = document.getElementById(colapseimg);
+
+    if (x.style.display === 'none') {
+      x.style.display = 'block';
+      //arrow down
+      imgcolapse.src = '../images/icons/arrow.png';
+    } else {
+      x.style.display = 'none';
+      imgcolapse.src = '../images/icons/arrowdown.png';
+    }
+  }
+};
 
 // $(document).on('click','#main-tourist-row div',function(e){
 //   alert($(this).data('itemid'));

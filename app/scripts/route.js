@@ -19,7 +19,7 @@ var putMainContent = (page) => {
   switch (page) {
     case 'home':
       let htmlContentHome = home.render();
-      mainContent.innerHTML = htmlContentHome;
+
       break;
     case 'about':
       //$('.coaches').before( about.render() );//todo just for demo
