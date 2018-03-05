@@ -1,7 +1,7 @@
-WINDOW_TITLE  = wwe performance center.
+WINDOW_TITLE  = Podés Viajar.
 
 # Navbar
-ABOUTWWEPC = Acerca de WWE PC
+ABOUTWWEPC = Acerca de Podés Viajar
 JOURNEY = El viaje
 APPLY = Aplicar
 TRYOUT = probar

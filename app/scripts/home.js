@@ -31,6 +31,7 @@ class Home {
       '    "visited": 0,' +
       '    "title": "La Barrosa, aventura en la sierra",' +
       '    "info": "et iusto sed quo iure\\nvoluptatem occaecati omnis eligendi aut ad\\nvoluptatem doloribus vel accusantium quis pariatur\\nmolestiae porro eius odio et labore et velit aut",' +
+      '    "moreinfo": "Lorem ipsum dolor sit amet, nam legimus explicari eu, eam cu posse torquatos persecuti, nominati sadipscing eu vel. In tale prompta vituperatoribus pro. Mandamus consetetur dissentias ut sit, an est viris recteque. Ubique indoctum mel no, magna sanctus definitiones ne quo. Solum intellegam duo ne, sea oblique disputationi ne, duo an dolor ubique. Cu eius lucilius definiebas eum.",'+
       '    "image": "https://www.welcomeargentina.com/paseos/la_barrosa/la-barrosa-1.jpg"' +
       '  },' +
       '  {' +
@@ -39,6 +40,7 @@ class Home {
       '    "visited": 0,' +
       '    "title": "Los autos de fórmula también dicen presente",' +
       '    "info": "ullam et saepe reiciendis voluptatem adipisci\\nsit amet autem assumenda provident rerum culpa\\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\\nquis sunt voluptatem rerum illo velit",' +
+      '    "moreinfo": "Lorem ipsum dolor sit amet, nam legimus explicari eu, eam cu posse torquatos persecuti, nominati sadipscing eu vel. In tale prompta vituperatoribus pro. Mandamus consetetur dissentias ut sit, an est viris recteque. Ubique indoctum mel no, magna sanctus definitiones ne quo. Solum intellegam duo ne, sea oblique disputationi ne, duo an dolor ubique. Cu eius lucilius definiebas eum.",'+
       '    "image": "https://www.welcomeargentina.com/paseos/crespi_competicion/tulio-crespi-competicion-1.jpg"' +
       '  },' +
       '  {' +
@@ -47,6 +49,7 @@ class Home {
       '    "visited": 0,' +
       '    "title": "Laguna La Brava y sus sierras milenarias",' +
       '    "info": "repudiandae veniam quaerat sunt sed\\nalias aut fugiat sit autem sed est\\nvoluptatem omnis possimus esse voluptatibus quis\\nest aut tenetur dolor neque",' +
+      '    "moreinfo": "Lorem ipsum dolor sit amet, nam legimus explicari eu, eam cu posse torquatos persecuti, nominati sadipscing eu vel. In tale prompta vituperatoribus pro. Mandamus consetetur dissentias ut sit, an est viris recteque. Ubique indoctum mel no, magna sanctus definitiones ne quo. Solum intellegam duo ne, sea oblique disputationi ne, duo an dolor ubique. Cu eius lucilius definiebas eum.",'+
       '    "image": "https://www.welcomeargentina.com/paseos/laguna_labrava/laguna-la-brava-1.jpg"' +
       '  },' +
       '  {' +
@@ -55,35 +58,26 @@ class Home {
       '    "visited": 0,' +
       '    "title": "Museo Fangio",' +
       '    "info": "ut aspernatur corporis harum nihil quis provident sequi\\nmollitia nobis aliquid molestiae\\nperspiciatis et ea nemo ab reprehenderit accusantium quas\\nvoluptate dolores velit et doloremque molestiae",' +
+      '    "moreinfo": "Lorem ipsum dolor sit amet, nam legimus explicari eu, eam cu posse torquatos persecuti, nominati sadipscing eu vel. In tale prompta vituperatoribus pro. Mandamus consetetur dissentias ut sit, an est viris recteque. Ubique indoctum mel no, magna sanctus definitiones ne quo. Solum intellegam duo ne, sea oblique disputationi ne, duo an dolor ubique. Cu eius lucilius definiebas eum.",'+
       '    "image": "https://www.welcomeargentina.com/paseos/museo_fangio/juan-manuel-fangio-1.jpg"' +
-      '  },' +
-      '  {' +
-      '    "userId": 1,' +
-      '    "id": 7,' +
-      '    "visited": 0,' +
-      '    "title": "magnam facilis autem",' +
-      '    "info": "dolore placeat quibusdam ea quo vitae\\nmagni quis enim qui quis quo nemo aut saepe\\nquidem repellat excepturi ut quia\\nsunt ut sequi eos ea sed quas",' +
-      '    "image": ""' +
-      '  },' +
-      '  {' +
-      '    "userId": 1,' +
-      '    "id": 8,' +
-      '    "visited": 0,' +
-      '    "title": "dolorem dolore est ipsam",' +
-      '    "body": "dignissimos aperiam dolorem qui eum\\nfacilis quibusdam animi sint suscipit qui sint possimus cum\\nquaerat magni maiores excepturi\\nipsam ut commodi dolor voluptatum modi aut vitae",' +
-      '    "image": ""' +
       '  }' +
       ']';
   }
 
   rendercoupon() {
 
-    $(document).on('click','.overlay-content .nav-link',function(e){
+    // $(document).on('click','.cupon',function(e){
+    //
+    //   //alert('cupon de descuento');
+    //   console.log('entra coupon');
+    //   $('.cuopon').toggle();
+    //   e.preventDefault();
+    // });
 
-      //alert('cupon de descuento');
-      $('.cuopon').toggle();
-    });
+
   }
+
+
 
   // Method
   renderTourist() {
@@ -161,7 +155,8 @@ class Home {
     var selfthisdata = JSON.parse(this.itemTourist);
     $(document).on('click','#share-buttons a',function(e){
 
-      selfthisdata[selfthis.currentItem].visited = 1;
+      let citem = selfthis.currentItem-1;
+      selfthisdata[citem].visited = 1;
       selfthis.itemTourist = JSON.stringify(selfthisdata);
       selfthis.renderTourist();
       e.preventDefault();

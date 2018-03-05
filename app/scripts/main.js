@@ -76,6 +76,20 @@ $(document).on('click','.readmoreinfo', function(e){
   e.preventDefault(); // Prevent a page reload when a link is pressed
 });
 
+// $( '.cupon' ).on( 'click', function(e) {
+//   console.log( $( this ).text() );
+//   $('.cuopon').toggle();
+//   e.preventDefault();
+// });
+
+
+$(document).on('click','.cupon',function(e){
+
+  console.log('entra coupon');
+  $('.cuopon').toggle();
+  e.preventDefault();
+});
+
 
 var cont = 2 ;
 var m = new Menu();

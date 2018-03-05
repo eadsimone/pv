@@ -77,7 +77,7 @@ const Menu = class Menu {
       '                  <a class="nav-link" href="#" >10% off Guolis cafe</a> ' +
       '                </li> ' +
       '                <li class="nav-item"> ' +
-      '                  <a class="nav-link" href="#" >50% off MC donals</a> ' +
+      '                  <a class="nav-link cupon" href="#" >50% off MC donals</a> ' +
       '                  <img src="../images/cupones/mcdonals.jpeg" alt="" class="mw-50 img-fluid cuopon ">' +
       '                </li> ' +
       // '                <li class="nav-item"> ' +

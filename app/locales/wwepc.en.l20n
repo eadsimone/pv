@@ -1,7 +1,7 @@
-WINDOW_TITLE  = wwe performance center.
+WINDOW_TITLE  = Podés Viajar.
 
 # Navbar
-ABOUTWWEPC = About WWE PC
+ABOUTWWEPC = About Podés Viajar
 JOURNEY = The journey
 APPLY = apply
 TRYOUT = tryout

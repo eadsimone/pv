@@ -46,15 +46,15 @@
       }
     }
     a:hover {
-      border-bottom: 0.25rem solid $lipstick;
+      border-bottom: 0.25rem solid $orange;
       background-color: transparent;
     }
     a.active {
-      border-bottom: 0.25rem solid $lipstick;
+      border-bottom: 0.25rem solid $orange;
       background-color: transparent;
     }
     a:focus {
-      border-bottom: 0.25rem solid $lipstick;
+      border-bottom: 0.25rem solid $orange;
       background-color: transparent;
     }
     a#logo{
@@ -102,7 +102,7 @@
           color: $grey;
           background-color: transparent;
           &:hover, &:focus {
-            color: $lipstick;
+            color: $orange;
             background-color: transparent;
           }
         }
@@ -178,7 +178,7 @@
   }
 
   .overlay a:hover, .overlay a:focus {
-    color: $lipstick;
+    color: $orange;
     opacity: 1;
   }
 
@@ -398,7 +398,7 @@
           letter-spacing: normal;
           outline: none;
           &:hover {
-            color: $lipstick;
+            color: $orange;
             background-color: transparent;
           }
         }
