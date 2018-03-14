@@ -36,7 +36,7 @@ body {
 #main-tourist-row {
   &::after {
     content: "";
-    opacity: 0.3;
+    opacity: 0.109;
     background: url("../../images/balcarce_bg.jpg");
     -ms-background-size: cover;
     -o-background-size: cover;
@@ -66,13 +66,22 @@ body {
   margin: 1.5rem auto;
 
   img {
-    border-radius: 3rem;
+    border-radius: 2rem;
   }
 }
 
 
 /*for mobile devices*/
 @media (max-width: $small) {
+  .item-tourist-btn {
+    margin: 1.5rem auto;
+
+    img {
+      height: 12rem;
+      width: 100%;
+    }
+  }
+
 }
 @media screen and (max-width: $large) {
 }
